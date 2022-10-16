@@ -3,7 +3,7 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.WriteLine("Введите число");
+Console.WriteLine("Введите число больше 0");
 int number = Convert.ToInt32(Console.ReadLine());//использование int32.Parse() выдает сообщение о возможном получении null на вход 
 for (int i = 1; i <= number; i++)
 {
