@@ -15,11 +15,17 @@ int Number(string message)
 
 bool Validation(int a)
 {
-    if (a >= 100 && a <= 999) return true;
+    if (a >= 100 && a <= 999) return true;//Is it a three-digit number?
     else return false;
 }
 
-int number = Number("Введите трезначное число");
+int number = Number("Введите трезначное число");//Getting a number
 
-if (Validation(number)) Console.WriteLine($"Вторая цифра введенного числа {number % 100 / 10}");
-else Console.WriteLine("Число не трехзначное");
+if (Validation(number)) 
+{
+Console.WriteLine($"Вторая цифра введенного числа {number % 100 / 10}");//If Validation is true, we calculate second digit of the number
+}
+else 
+{
+Console.WriteLine("Число не трехзначное");
+}
