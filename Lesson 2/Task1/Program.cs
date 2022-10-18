@@ -13,15 +13,13 @@ int Number(string message)
     return number;
 }
 
-bool Validation (int a)
+bool Validation(int a)
 {
-    if (a => 100 && a <= 999) return false;
-    else return true;
+    if (a >= 100 && a <= 999) return true;
+    else return false;
 }
 
 int number = Number("Введите трезначное число");
 
 if (Validation(number)) Console.WriteLine($"Вторая цифра введенного числа {number % 100 / 10}");
 else Console.WriteLine("Число не трехзначное");
-
-Console.WriteLine(Validation(number));
