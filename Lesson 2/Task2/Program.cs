@@ -8,6 +8,12 @@
 int number = new Random().Next(100, 1000);
 
 Console.WriteLine(number);//Output a random number for information
-//int firstDigit = number/100; I decided not to use these variables, in my opinion, there is no need for this.
-//int thirdDigit = number%10;
-Console.WriteLine($"{number/100}{number%10}");// by the {number / 100} i got first digit, by the {number % 10} i got third number.
+
+int GettingNewNumber(int number)
+{
+    int firstDigit = number / 100;
+    int thirdDigit = number % 10;
+    return firstDigit * 10 + thirdDigit;
+}
+
+Console.WriteLine($"After removing the second digit i got {GettingNewNumber(number)}");

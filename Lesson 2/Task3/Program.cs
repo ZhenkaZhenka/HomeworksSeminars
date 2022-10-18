@@ -14,19 +14,24 @@ bool Validation(int a)
     else return false;
 }
 
-int temp = number;                  //I wanted to put 17-22 lines in the method, but in return i got permanent counter = 0
-while (temp > 0)
+int CalculationOfCounter(int counter)
 {
-    temp = temp / 10;
-    counter = ++counter;
+    int numberOfDesiredDigit = 3;//Put number of the desired sequence number
+    int temp = number;                  
+    while (temp > 0)
+    {
+        temp = temp / 10;
+        counter++;
+    }
+    return counter - numberOfDesiredDigit;
 }
 
 int GettingAThirdDigit(int number)
 {
-    while (counter - 3 > 0)//digit 3 is the sequence number of desired digit
+    while (CalculationOfCounter(counter) > 0)
     {
         number = number / 10;//i'll devide untill get a three-digit number
-        counter = --counter;
+        counter--;
     }
     return number % 10;//i get desired digit
 }
