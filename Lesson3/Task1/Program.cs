@@ -5,7 +5,7 @@
 // 12821 -> да
 // 23432 -> да
 
-//This program can check any number for the state of palindrome
+//This program can check any number for the state of palindrome. Number restricted by the size of the integer
 
 
 int number = Number("Input a number that you want to check for the state of the palindrome");
@@ -106,7 +106,6 @@ if (CheckingForParityOfANumber(amountOfDigits))
 }
 else if (!(CheckingTheOddNumberForThePalindrome(CounterForTheOddNumber(numbers, counter), amountOfDigits)) || amountOfDigits == 1)
 {
-    Console.WriteLine(amountOfDigits != 1);
     Console.WriteLine($"The odd number {number} is not a palindrome");
 }
 else
