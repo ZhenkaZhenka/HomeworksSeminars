@@ -4,20 +4,30 @@
 // 78 -> третьей цифры нет
 // 326792 -> 6
 
+//Program works with any-digit numbers and any sequence number of digit
+
+int Number(string message)
+{
+    Console.WriteLine(message);
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
+}
+
 int number = new Random().Next();
-int counter = 0;
 Console.WriteLine(number);
+int numberOfDesiredDigit = Number("Input a desired sequence number of a digit");//Put number of the desired sequence number
+int counter = 0;
 
 bool Validation(int a)
 {
-    if (a > 99) return true;//Is number has three-digit?
+    if (counter < 0) return true;//validator ready to check any sequence number of any digit;
     else return false;
 }
 
-int CalculationOfCounter(int counter)
+int CalculationOfCounter(int counter, int desiredNumber)
 {
-    int numberOfDesiredDigit = 3;//Put number of the desired sequence number
-    int temp = number;                  
+    
+    int temp = number;
     while (temp > 0)
     {
         temp = temp / 10;
@@ -28,7 +38,7 @@ int CalculationOfCounter(int counter)
 
 int GettingAThirdDigit(int number)
 {
-    while (CalculationOfCounter(counter) > 0)
+    while (CalculationOfCounter(counter, numberOfDesiredDigit) > 0)
     {
         number = number / 10;//i'll devide untill get a three-digit number
         counter--;
@@ -38,8 +48,8 @@ int GettingAThirdDigit(int number)
 
 int thirdDigit = GettingAThirdDigit(number);
 
-if (Validation(number))
+if (Validation(counter))
 {
-    Console.WriteLine($"Third digit of random number is {thirdDigit}");
+    Console.WriteLine($"{numberOfDesiredDigit} digit of random number is {thirdDigit}");
 }
-else Console.WriteLine("Number hasn't third digit");
+else Console.WriteLine($"Number hasn't {numberOfDesiredDigit} digit");
