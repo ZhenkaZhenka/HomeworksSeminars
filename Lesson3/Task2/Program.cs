@@ -20,5 +20,14 @@ double Number(string message)//input number
     return number;
 }
 
-double distance = Math.Sqrt(Math.Pow(bx-ax, 2)+Math.Pow(by-ay, 2)+Math.Pow(bz-az, 2));
+double GetPowCoord(double a, double b)//
+{
+    return Math.Pow(a-b, 2);
+}
+
+double x = GetPowCoord(ax, bx);
+double y = GetPowCoord(ay, by);
+double z = GetPowCoord(az, bz);
+
+double distance = Math.Sqrt(x+y+z);
 Console.WriteLine($"Distance between A and B is {distance}");

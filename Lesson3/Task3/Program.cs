@@ -12,21 +12,29 @@ int Number(string message)//input number
 }
 
 int number = Number("Input number");
-int[] array = new int[number];
-array = SquareOfNumbers(number);
 
-int[] SquareOfNumbers(int number)
-{
-    for(int i=0; i < number; i++)
-    {
-        int temp = i + 1;
-        array[i] = temp * temp * temp;
-    }
-    return array;
-}
+//Решение через массив, но оно громоздкое
+// int[] array = new int[number];
+// array = SquareOfNumbers(number);
 
-for(int i = 0; i < array.Length; i++)
+// int[] SquareOfNumbers(int number)
+// {
+//     for(int i=0; i < number; i++)
+//     {
+//         int temp = i + 1;
+//         array[i] = temp * temp * temp;
+//     }
+//     return array;
+// }
+
+// for(int i = 0; i < array.Length; i++)
+// {
+//     Console.Write(array[i]);
+//     if (i < array.Length - 1) Console.Write(", ");
+// }
+
+for(int i = 1; i <= number; i++)
 {
-    Console.Write(array[i]);
-    if (i < array.Length - 1) Console.Write(", ");
+    Console.Write(Math.Pow(i, 3));
+    if (i < number) Console.Write(", ");
 }
