@@ -17,7 +17,7 @@ int number = Number("Input number");
 // int[] array = new int[number];
 // array = SquareOfNumbers(number);
 
-// int[] SquareOfNumbers(int number)
+// int[] CubeOfNumbers(int number)
 // {
 //     for(int i=0; i < number; i++)
 //     {
