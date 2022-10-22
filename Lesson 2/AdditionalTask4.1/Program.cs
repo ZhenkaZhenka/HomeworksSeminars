@@ -17,10 +17,10 @@ void MultiplicityChecking(int number)
     int randomNumber = new Random().Next();// This action makes random number
     while (randomNumber % number != 0)//here i'm checking a multiplicity
     {
-        Console.WriteLine($"{randomNumber} is not a multiplу of {number}");
+        Console.WriteLine($"{randomNumber} is not a multiple of {number}");
         randomNumber = new Random().Next();// This action makes new random number
     }
-    Console.WriteLine($"{randomNumber} is a multiply of {number}");
+    Console.WriteLine($"{randomNumber} is a multiple of {number}");
 }
 
 MultiplicityChecking(Number("Input number for multiplicity checking"));
