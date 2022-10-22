@@ -24,7 +24,10 @@ int[] GetArray(int lengthOfArray)
 
 array = GetArray(lengthOfArray);
 
-foreach(int item in array)
+for(int i = 0; i < array.Length; i++)
 {
-    Console.Write($"{item} ");
+    if (i == 0) Console.Write("[");
+    Console.Write(array[i]);
+    if (i != array.Length - 1) Console.Write(", ");
+    if (i == array.Length - 1) Console.Write("]");
 }
