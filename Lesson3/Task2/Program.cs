@@ -20,14 +20,10 @@ double Number(string message)//input number
     return number;
 }
 
-double GetPowCoord(double a, double b)//
-{
-    return Math.Pow(a-b, 2);
-}
 
-double x = GetPowCoord(ax, bx);
-double y = GetPowCoord(ay, by);
-double z = GetPowCoord(az, bz);
+double diffX = Math.Pow(ax-bx, 2);//получение квадрата разности 
+double diffY = Math.Pow(ay-by, 2);//получение квадрата разности 
+double diffZ = Math.Pow(az-bz, 2);//получение квадрата разности 
 
-double distance = Math.Sqrt(x+y+z);
-Console.WriteLine($"Distance between A and B is {distance}");
+double distance = Math.Sqrt(diffX+diffY+diffZ);
+Console.WriteLine($"Distance between A and B is {distance:f2}");

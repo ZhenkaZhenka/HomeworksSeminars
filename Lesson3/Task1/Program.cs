@@ -6,6 +6,7 @@
 // 23432 -> да
 
 //This program can check any number for the state of palindrome. Number restricted by the size of the integer
+//i couldn't think up a better solution without array.
 
 
 int number = Number("Input a number that you want to check for the state of the palindrome");
