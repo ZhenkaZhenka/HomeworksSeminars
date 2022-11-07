@@ -16,7 +16,6 @@ int Number(string message)
 
 int Multiplicity (int number, int power)
 {
-    Console.WriteLine("1");
     if (power == 0) return 1;
     if (power == 1) return number;
     return number * Multiplicity(number, power - 1);
