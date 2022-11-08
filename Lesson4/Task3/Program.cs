@@ -4,7 +4,6 @@
 // 6, 1, 33 -> [6, 1, 33]
 
 int lengthOfArray = Number("Input array length that you want to see");
-int[] array = new int[lengthOfArray];
 
 int Number(string message)//input number
 {
@@ -15,16 +14,22 @@ int Number(string message)//input number
 
 int[] GetArray(int lengthOfArray)
 {
-    for(int i = 0; i<array.Length; i++)
+    int[] array = new int[lengthOfArray];
+    for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(0, 100);
     }
     return array;
 }
 
-array = GetArray(lengthOfArray);
+int[] array = GetArray(lengthOfArray);
 
-foreach(int item in array)
+void PrintArray(int[] array)
 {
-    Console.Write($"{item} ");
+    foreach (int item in array)
+    {
+        Console.Write($"{item} ");
+    }
 }
+
+PrintArray(array);
