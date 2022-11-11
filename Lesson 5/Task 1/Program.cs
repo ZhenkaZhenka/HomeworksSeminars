@@ -31,7 +31,6 @@ void PrintArray(int[] array)
     }
 }
 
-int[] array = GetArray(lengthArr, downLimit, topLimit);
 
 int GetAmountOfEvenNumbers(int[] array)
 {
@@ -43,5 +42,13 @@ int GetAmountOfEvenNumbers(int[] array)
     return counter;
 }
 
+
+void Execute()
+{
+int[] array = GetArray(lengthArr, downLimit, topLimit);
 PrintArray(array);
+Console.WriteLine();
 Console.WriteLine($"Amount of the even numbers in array is {GetAmountOfEvenNumbers(array)}");
+}
+
+Execute();

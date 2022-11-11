@@ -33,7 +33,6 @@ void PrintArray(int[] array)
     }
 }
 
-int[] array = GetArray(lengthArr, downLimit, topLimit);
 
 int GetSummOfNumbers(int[] array)
 {
@@ -45,7 +44,16 @@ int GetSummOfNumbers(int[] array)
     return summ;
 }
 
+
+void Execute()
+{
+int[] array = GetArray(lengthArr, downLimit, topLimit);
+
 int summ = GetSummOfNumbers(array);
 
 PrintArray(array);
+Console.WriteLine();
 Console.WriteLine($"Summ of the numbers that are in the odd position of the array is {summ}");
+}
+
+Execute();

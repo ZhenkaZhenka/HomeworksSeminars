@@ -13,7 +13,7 @@ double[] GetArray(int lengthArray)
     double[] array = new double[lengthArray];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().NextDouble();
+        array[i] = new Random().NextDouble() + new Random().Next(0, 20);
     }
     return array;
 }
@@ -49,6 +49,8 @@ void PrintArray(double[] array)
 
 double GetDifference(double min, double max) => max - min;
 
+void Execute()
+{
 int lengthArray = Number("Input size of an array");
 double[] array = GetArray(lengthArray);
 double min = GetMin(array);
@@ -56,6 +58,10 @@ double max = GetMax(array);
 double diff = GetDifference(min, max);
 
 PrintArray(array);
+
 Console.WriteLine($"Minimal number in array is {min:f4}");
 Console.WriteLine($"Maximal number in array is {max:f4}");
 Console.WriteLine($"Difference between min and max numbers in array is {diff:f4}");
+}
+
+Execute();
