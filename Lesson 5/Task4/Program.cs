@@ -23,6 +23,12 @@ void NameOfMethod(int sizeOfRow, int startNumber)
     }
     if (lastSizeOfRow > 0) NameOfMethod(lastSizeOfRow, startNumber + 1);
 }
+
+void Execute()
+{
 int sizeOfRow = Number("Input a size of the row");
 int startNumber = Number("Number that you want to start the row");
 NameOfMethod(sizeOfRow, startNumber);
+}
+
+Evecute();
