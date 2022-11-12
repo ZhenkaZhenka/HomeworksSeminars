@@ -14,7 +14,7 @@ void NameOfMethod(int sizeOfRow, int startNumber)
     int varForCycle = startNumber;
     int varForWriting = startNumber;
     int lastSizeOfRow = sizeOfRow;
-    while(varForCycle > 0)
+    while (varForCycle > 0)
     {
         Console.Write($"{varForWriting} ");
         --varForCycle;
@@ -26,9 +26,9 @@ void NameOfMethod(int sizeOfRow, int startNumber)
 
 void Execute()
 {
-int sizeOfRow = Number("Input a size of the row");
-int startNumber = Number("Number that you want to start the row");
-NameOfMethod(sizeOfRow, startNumber);
+    int sizeOfRow = Number("Input a size of the row");
+    int startNumber = Number("Number that you want to start the row");
+    NameOfMethod(sizeOfRow, startNumber);
 }
 
-Evecute();
+Execute();

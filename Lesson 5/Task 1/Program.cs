@@ -2,10 +2,6 @@
 
 // [345, 897, 568, 234] -> 2
 
-int lengthArr = Number("Input a length of array");
-int downLimit = Number("Input a down limit of numbers in array");
-int topLimit = Number("Input a top limit of array");
-
 int Number(string message)//input number
 {
     Console.WriteLine(message);
@@ -31,7 +27,6 @@ void PrintArray(int[] array)
     }
 }
 
-
 int GetAmountOfEvenNumbers(int[] array)
 {
     int counter = 0;
@@ -42,13 +37,15 @@ int GetAmountOfEvenNumbers(int[] array)
     return counter;
 }
 
-
 void Execute()
 {
-int[] array = GetArray(lengthArr, downLimit, topLimit);
-PrintArray(array);
-Console.WriteLine();
-Console.WriteLine($"Amount of the even numbers in array is {GetAmountOfEvenNumbers(array)}");
+    int lengthArr = Number("Input a length of array");
+    int downLimit = Number("Input a down limit of numbers in array");
+    int topLimit = Number("Input a top limit of array");
+    int[] array = GetArray(lengthArr, downLimit, topLimit);
+    PrintArray(array);
+    Console.WriteLine();
+    Console.WriteLine($"Amount of the even numbers in array is {GetAmountOfEvenNumbers(array)}");
 }
 
 Execute();
