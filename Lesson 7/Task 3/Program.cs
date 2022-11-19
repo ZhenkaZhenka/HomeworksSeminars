@@ -38,17 +38,22 @@ double[,] CreateArray(int m, int n)
     return array;
 }
 
-void FindArithmeticMean(double[,] array)
+double FindArithmeticMean(double[,] array, int numOfColumn)
 {
     double sumOfCol = 0;
-    Console.Write("Arithmetic mean of the each column are: ");
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int i = 0; i < array.GetLength(0); i++)
-        {
-            sumOfCol += array[i, j];// I chanched numOfColumn to n to at ease input
-        }
-        Console.Write($"{sumOfCol / array.GetLength(0)}\t");
+        sumOfCol += array[i, numOfColumn];
+    }
+    return sumOfCol / array.GetLength(0);
+}
+
+void PrintResult(double[,] array)
+{
+    Console.Write("Arithmetic mean of the each column are: ");
+    for (int numOfColumn = 0; numOfColumn < array.GetLength(1); numOfColumn++)
+    {
+        Console.Write($"{FindArithmeticMean(array, numOfColumn):f2}\t");
     }
 }
 
@@ -58,7 +63,7 @@ void Execute()
     int columnsInArray = ReadData("Input an amount of the columns in the array");
     double[,] arr = CreateArray(rowsInArray, columnsInArray);
     PrintArray(arr);
-    FindArithmeticMean(arr);
+    PrintResult(arr);
 }
 
 Execute();
