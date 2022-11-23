@@ -64,10 +64,10 @@ void MoveUp(string[,] array, int k, int l, int number, int step)
         array[k, l] = number.ToString("D2");
         number++;
     }
-    if (step +1 < array.GetLength(0) / 2)
+    if (step + 1 < array.GetLength(0) / 2)
     {
-    step++;
-    MoveRight(array, k + step, l + step, number, step);
+        step++;
+        MoveRight(array, k + step, l + step, number, step);
     }
 }
 

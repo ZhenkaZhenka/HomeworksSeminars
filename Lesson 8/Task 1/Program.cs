@@ -48,11 +48,11 @@ int[,] SortOfTheArray(int[,] array)
         while (counter != 0)
         {
             counter = 0;
-            for (int j = 0; j < array.GetLength(1)-1; j++)
+            for (int j = 0; j < array.GetLength(1) - 1; j++)
             {
-                if(array[i,j] < array[i,j+1])
+                if (array[i, j] < array[i, j + 1])
                 {
-                    (array[i,j], array[i,j+1]) = (array[i,j+1],array[i,j]);
+                    (array[i, j], array[i, j + 1]) = (array[i, j + 1], array[i, j]);
                     counter++;
                 }
             }
@@ -65,7 +65,7 @@ void Main()
 {
     int m = ReadData("Input rows");
     int n = ReadData("input columns");
-    int[,] array = CreateArray(m,n);
+    int[,] array = CreateArray(m, n);
     PrintArray(array);
     array = SortOfTheArray(array);
     PrintArray(array);

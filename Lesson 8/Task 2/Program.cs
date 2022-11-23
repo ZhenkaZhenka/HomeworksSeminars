@@ -48,7 +48,7 @@ void PrintArray(int[,] array)
 int FindSumInTheRow(int[,] array, int i)
 {
     int sumInRow = 0;
-    for(int j = 0; j < array.GetLength(1); j++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
         sumInRow += array[i, j];
     }
@@ -58,9 +58,9 @@ int FindSumInTheRow(int[,] array, int i)
 int NumberOfRow(int[,] array)
 {
     int index = 0;
-    for(int i = 0; i < array.GetLength(0) - 1; i++)
+    for (int i = 0; i < array.GetLength(0) - 1; i++)
     {
-        if (FindSumInTheRow(array, i) > FindSumInTheRow(array, i+1)) index = i + 1;
+        if (FindSumInTheRow(array, i) > FindSumInTheRow(array, i + 1)) index = i + 1;
     }
     return index;
 }
