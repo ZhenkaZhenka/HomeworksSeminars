@@ -73,12 +73,10 @@ int[,] StepRoundArray(int[,] array, int i, int j, int step)
     int number;
     if (step <= array.GetLength(0) / 2)
     {
-        //if (step % 2 == 0 || step > 3) number = array[k + step, l + step] + 1; // Ужасная формула, понимаю, получил "тупым" подбором. Просто прибавлять step- не работает почему-то ((int)(Math.Round((double)step / 2)))
-        number = array[k + step, l] + 1;
-        MoveRight(array, k + step, l + step, number, step);
-        k++;
-        l++;
-        StepRoundArray(array, k, l, (step + 1));
+        if (step % 2 == 0 || array.GetLength(0) > 6) number = array[k + step, l + ((int)(Math.Round((double)step / 2)))] + 1; // Ужасная формула, понимаю, получил "тупым" подбором. Просто прибавлять step- не работает почему-то
+        else number = array[k + step, l] + 1;
+        MoveRight(array, k  + step, l  + step, number, step);
+        StepRoundArray(array, k, l, (step  + 1));
     }
     return array;
 }
