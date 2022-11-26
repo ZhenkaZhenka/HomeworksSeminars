@@ -11,12 +11,13 @@ int ReadData(string message)
 
 void PrintEvenNumbers(int m, int n)
 {
-    if (m >= n) return;
+    if (m > n) return;
     if (m % 2 == 0) Console.Write($"{m} ");
-    PrintEvenNumbers(m + 1, n);
+    PrintEvenNumbers(m + 2, n);
 }
 
 int m = ReadData("input M");
 int n = ReadData("input N");
 
-PrintEvenNumbers(m, n);
+if (m % 2 != 0) PrintEvenNumbers(m + 1, n);
+else PrintEvenNumbers(m, n);
